@@ -8,18 +8,18 @@ using std::string;
 // результаты сканирования
 #ifndef base_classes
 #define base_classes
-class ScanResult {
+struct ScanResult {
     int prog_type;
     int prog_name_len;
     char *  prog_name;
 };
 
-class ScanData {
+struct ScanData {
     void * data;
     long data_len;
 };
 
-class MalvareRecord {
+struct MalvareRecord {
 	int prog_type;
 	int prog_name_len;
 	char * prog_name;
@@ -28,7 +28,7 @@ class MalvareRecord {
 	char * sign;
 };
 
-class AntivirusDatabase{
+struct AntivirusDatabase{
     
 };
 
