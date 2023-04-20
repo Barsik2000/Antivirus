@@ -1,0 +1,5 @@
+C:\Users\orlov\source\repos\AntiVirusGUI\AntiVirusGUI\x64\Debug\AntiVirusGUI.vcxproj.AssemblyReference.cache
+C:\Users\orlov\source\repos\AntiVirusGUI\AntiVirusGUI\x64\Debug\AntiVirusGUI.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\orlov\source\repos\AntiVirusGUI\AntiVirusGUI\x64\Debug\AntiVirusGUI.MyForm.resources
+C:\Users\orlov\source\repos\AntiVirusGUI\AntiVirusGUI\x64\Debug\AntiVirusGUI.vcxproj.GenerateResource.cache
+C:\Users\orlov\source\repos\AntiVirusGUI\AntiVirusGUI\x64\Debug\AntiVirusGUI.SignandHash.resources
