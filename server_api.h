@@ -1,17 +1,49 @@
 #include <iostream>
 
 // результаты сканирования
+#pragma once
+#include <iostream>
+#include <string>
+using std::string;
+// результаты сканирования
+#ifndef base_classes
+#define base_classes
 class ScanResult {
-    long id;
-}
+    int prog_type;
+    int prog_name_len;
+    char *  prog_name;
+};
 
 class ScanData {
     void * data;
     long data_len;
+};
+
+class MalvareRecord {
+	int prog_type;
+	int prog_name_len;
+	char * prog_name;
+	int sign_type;
+	int sign_len;
+	char * sign;
+};
+
+class AntivirusDatabase{
+    
+};
+
+#endif
+
+namespace serverapi{
+	ScanResult * scanData(ScanData* data);
+
+	long addRecord(MalvareRecord * sha256_hash, AntivirusDatabase * base);
+
+	MalvareRecord * getRecord(long id, AntivirusDatabase * base);
+
+	void deleteRecord(long id, AntivirusDatabase * base);
+
+	void deleteRecord(MalvareRecord * record, AntivirusDatabase * base);
+
+	int getRecordIndex(MalvareRecord * record, AntivirusDatabase * base);
 }
-
-long scanFile(string str, ScanResult * result);
-
-long scanData(ScanData* data, ScanResult * result);
-
-long quarantine(ScanResult*);
