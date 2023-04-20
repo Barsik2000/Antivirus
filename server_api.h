@@ -14,7 +14,7 @@ struct ScanResult {
     char *  prog_name;
 };
 
-struct ScanData {
+struct FileData {
     void * data;
     long data_len;
 };
@@ -35,11 +35,15 @@ struct AntivirusDatabase{
 #endif
 
 namespace serverapi{
-	ScanResult * scanData(ScanData* data);
+	ScanResult * scanData(FileData* data);
 
 	long addRecord(MalvareRecord * sha256_hash, AntivirusDatabase * base);
 
 	MalvareRecord * getRecord(long id, AntivirusDatabase * base);
+	
+	AntivirusDatabase * openDatabase(FileData * data);
+	
+	FileData * saveDatabase(AntivirusDatabase * base);
 
 	void deleteRecord(long id, AntivirusDatabase * base);
 
